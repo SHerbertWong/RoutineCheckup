@@ -44,7 +44,7 @@ Function Start-RoutineCheckupBootstrapping
 					Caption = "PowerShell NT Object Manager module package"
 					FileName = "PSNtObjectManager-Latest.zip"
 					Uri = "https://github.com/SHerbertWong/PSNtObjectManager/archive/Latest.zip"
-					ExtractionCommand = '& CMD /C "`"$InfoZipUnzipPath`" -j `"$(Join-Path -Path $PkgDirPath -ChildPath `$_.FileName)`" -d `"$(Join-Path -Path $RootPath -ChildPath $_.Name)`" > NUL"'
+					ExtractionCommand = '& CMD /C "`"$InfoZipUnzipPath`" -j `"$(Join-Path -Path $PkgDirPath -ChildPath $_.FileName)`" -d `"$(Join-Path -Path $RootPath -ChildPath $_.Name)`" > NUL"'
 				}
 			), `
 			(
