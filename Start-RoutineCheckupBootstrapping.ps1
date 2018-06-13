@@ -33,7 +33,7 @@ Function Start-RoutineCheckupBootstrapping
 				@{
 					Name = "PSNtStatus"
 					Caption = "PowerShell NTSTATUS module package"
-					FileName = "PSNtStatus-1.0.zip"
+					FileName = "PSNtStatus-Latest.zip"
 					Uri = "https://github.com/SHerbertWong/PSNtStatus/archive/1.0.zip"
 					ExtractionCommand = '& $InfoZipUnzipPath -j (Join-Path -Path $PkgDirPath -ChildPath $_.FileName) -d (Join-Path -Path $RootPath -ChildPath $_.Name) 2>&1'
 				}
@@ -43,15 +43,9 @@ Function Start-RoutineCheckupBootstrapping
 				@{
 					Name = "PSNtObjectManager"
 					Caption = "PowerShell NT Object Manager module package"
-<<<<<<< HEAD
 					FileName = "PSNtObjectManager-Latest.zip"
 					Uri = "https://github.com/SHerbertWong/PSNtObjectManager/archive/Latest.zip"
 					ExtractionCommand = '& CMD /C "`"$InfoZipUnzipPath`" -j `"$(Join-Path -Path $PkgDirPath -ChildPath $_.FileName)`" -d `"$(Join-Path -Path $RootPath -ChildPath $_.Name)`" > NUL"'
-=======
-					FileName = "PSNtObjectManager-1.0.zip"
-					Uri = "https://github.com/SHerbertWong/PSNtObjectManager/archive/1.0.zip"
-					ExtractionCommand = '& $InfoZipUnzipPath -j (Join-Path -Path $PkgDirPath -ChildPath $_.FileName) -d (Join-Path -Path $RootPath -ChildPath $_.Name) 2>&1'
->>>>>>> parent of f36f929... Commit 42B562A46C941961A950AF08DF7A320831CC313F
 				}
 			), `
 			(
@@ -59,7 +53,7 @@ Function Start-RoutineCheckupBootstrapping
 				@{
 					Name = "PSRoutineCheckup"
 					Caption = "PowerShell Windows Desktop Routine Check-Up module package"
-					FileName = "PSRoutineCheckup-1.0.zip"
+					FileName = "PSRoutineCheckup-Latest.zip"
 					Uri = "https://github.com/SHerbertWong/PSRoutineCheckup/archive/1.0.zip"
 					ExtractionCommand = '& $InfoZipUnzipPath -j (Join-Path -Path $PkgDirPath -ChildPath $_.FileName) -d (Join-Path -Path $RootPath -ChildPath $_.Name) 2>&1'
 					ExecutionCommand = 'Import-Module (Join-Path -Path $RootPath -ChildPath $_.Name); Start-RoutineCheckup'
@@ -100,7 +94,7 @@ Function Start-RoutineCheckupBootstrapping
 				Write-Host -Object "Failed." -ForegroundColor Red
 				throw $ErrorMessage
 			}
-			Write-Host -Object "Done." -ForegroundColor Green > $NULL
+			Write-Host -Object "Done." -ForegroundColor Green
 		}
 		
 		if (-not ([Object]::ReferenceEquals($NULL, $_.ExecutionCommand)))
