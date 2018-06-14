@@ -34,7 +34,7 @@ Function Start-RoutineCheckupBootstrapping
 					Name = "PSNtStatus"
 					Caption = "PowerShell NTSTATUS module package"
 					FileName = "PSNtStatus-Latest.zip"
-					Uri = "https://github.com/SHerbertWong/PSNtStatus/archive/1.0.zip"
+					Uri = "https://github.com/SHerbertWong/PSNtStatus/archive/Latest.zip"
 					ExtractionCommand = '& $InfoZipUnzipPath -j (Join-Path -Path $PkgDirPath -ChildPath $_.FileName) -d (Join-Path -Path $RootPath -ChildPath $_.Name) 2>&1'
 				}
 			), `
@@ -45,7 +45,7 @@ Function Start-RoutineCheckupBootstrapping
 					Caption = "PowerShell NT Object Manager module package"
 					FileName = "PSNtObjectManager-Latest.zip"
 					Uri = "https://github.com/SHerbertWong/PSNtObjectManager/archive/Latest.zip"
-					ExtractionCommand = '& CMD /C "`"$InfoZipUnzipPath`" -j `"$(Join-Path -Path $PkgDirPath -ChildPath $_.FileName)`" -d `"$(Join-Path -Path $RootPath -ChildPath $_.Name)`" > NUL"'
+					ExtractionCommand = '& $InfoZipUnzipPath -j (Join-Path -Path $PkgDirPath -ChildPath $_.FileName) -d (Join-Path -Path $RootPath -ChildPath $_.Name) 2>&1'
 				}
 			), `
 			(
@@ -54,7 +54,7 @@ Function Start-RoutineCheckupBootstrapping
 					Name = "PSRoutineCheckup"
 					Caption = "PowerShell Windows Desktop Routine Check-Up module package"
 					FileName = "PSRoutineCheckup-Latest.zip"
-					Uri = "https://github.com/SHerbertWong/PSRoutineCheckup/archive/1.0.zip"
+					Uri = "https://github.com/SHerbertWong/PSRoutineCheckup/archive/Latest.zip"
 					ExtractionCommand = '& $InfoZipUnzipPath -j (Join-Path -Path $PkgDirPath -ChildPath $_.FileName) -d (Join-Path -Path $RootPath -ChildPath $_.Name) 2>&1'
 					ExecutionCommand = 'Import-Module (Join-Path -Path $RootPath -ChildPath $_.Name); Start-RoutineCheckup'
 				}
