@@ -24,7 +24,7 @@ Function Start-RoutineCheckupBootstrapping
 					Name = "unz600xn"
 					Caption = "InfoZip utility package"
 					FileName = "unz600xn.exe"
-					Uri = "https://onedrive.live.com/download?resid=63B88D4120E75E9C!1273&authkey=!AHndM7a-w2fxFRs"
+					Uri = "https://onedrive.live.com/download?cid=63B88D4120E75E9C&resid=63B88D4120E75E9C%211273&authkey=AC2e7w_0UK6nziU"
 					ExtractionCommand = '& (Join-Path -Path $PkgDirPath -ChildPath $_.FileName) -d $InfoZipDirPath 2>&1'
 				}
 			), `
